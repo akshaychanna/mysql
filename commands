@@ -1,0 +1,81 @@
+SELECT * FROM users;  here users is your table name
+ to run cntr+enter
+ output:
+ will show your table (empty table now)
+ 
+ To add fileds into your table:
+ 
+ INSERT INTO users(first_name, last_name, email, emp_id)
+ values ( 'akshay' , 'channa'),(''amar', 'chinta'),('krishna' , 'Mamdyal');
+ 
+ cntr+enter to run
+ 
+ to see table
+ SELECT * FROM users;
+ SCHEMAS -> DATABASE->TABLE->TABLE_NAME right click on table name , select on select rows ----> it will show table
+ 
+ To see only first name from table
+ SELECT first_name FROM users;
+ cntr+enter to run
+ 
+ use of WHERE clouse
+ 
+ SELECT * FROM users WHERE location='solapur';
+ it will display rows , wich has location solapur
+ 
+ SELECT * FROM users WHERE location='solapur' AND last_name='channa';
+ 
+ we can also use operator >,< etc
+ 
+ 
+ To DELETE ROW
+ 
+ DELETE FROM users WHERE id=2;
+ 
+ 
+ To update any filed:
+ 
+ UPDATE users SET last_name='china_kattya' WHERE id=2;
+ run and you will see updated last_name for id2
+								
+ASCENDING AND DESCENDING:
+
+SELECT * FROM users ORDER BY last_name ASC/DESC;
+									 
+									 
+TO ADD COLUMN
+ALTER TABLE users ADD age VARCHAR(3);
+
+TO modify colomn datatype
+ALTER TABLE users MODIFY COLUMN age INT(3);
+
+concatination
+
+SELECT CONCAT (first_name,' ',last_name)  AS  'full_name'  FROM users;
+
+SELECT DISTINCT loaction FROM users;
+
+
+
+SELECT * FROM users WHERE age BETWEEN 20 AND 25;
+a
+SELECT * FROM users WHERE first_name LIKE 'a%';
+
+SELECT * FROM users WHERE location IN('pune', 'solapur');
+
+SELECT COUNT(id) users;
+it will give count (number of enterys)
+SELECT MAX(age) FROM users;
+it will give maximum age entry
+MIN also possible
+SUM will give addition of all ages
+
+SELECT UCASE(first_name) , LCASE( last_name) FROM users;
+to convert upper case and lower 
+
+SELECT location , COUNT(location) FROM users GROUP BY location;
+will show all location and location count 
+
+if you want to see, how many entrys from perticular location exapmle from solapur how many users are there
+SELECT location , COUNT(location) FROM users WHERE location = 'solapur' GROUP BY location;
+
