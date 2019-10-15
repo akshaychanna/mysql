@@ -1,3 +1,5 @@
+#login information
+
 sudo apt install mysql
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 mysql>FLUSH PRIVILEGES;
