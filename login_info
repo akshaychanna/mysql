@@ -1,0 +1,25 @@
+sudo apt install mysql
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+mysql>FLUSH PRIVILEGES;
+exit
+
+create user:
+mysql> CREATE USER 'akshay'@'localhost'IDENTIFIED BY '12345';
+
+TO see users
+
+mysql>SELECT user , host FROM mysql.user;
+ 
+ grant all PRIVILEGES
+ mysql>GRANT ALL PRIVILEGES ON * . * 'akshay'@'localhost';
+ mysql> FLUSH PRIVILEGES;
+ 
+ To check PRIVILEGES
+ mysql> show GRANT FOR  'akshay'@'localhost'
+ 
+ exit
+ login to akshay user
+ $
+ $mysql -u akshay -p
+ enter passord: 12345
+ mysql>
