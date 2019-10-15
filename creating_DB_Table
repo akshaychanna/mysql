@@ -1,0 +1,28 @@
+To CREATE DATABASE
+mysql> CREATE DATABASE DUMMY;
+
+To see databases
+mysql> SHOW DATABASES;
+
+To use databases
+
+mysql> USE dummy;
+
+
+mysql> SHOW TABLES;
+empty
+
+To CREATE TABLES:
+mysql> CREATE TABLES users(
+   -> id INT AUTO_INCREMENT,
+   -> first_name VARCHAR(100),
+   ->last_name V(75),
+   ->email VARCHAR(100),
+   ->password VARCHAR(255)
+   -> location VARCHAR(100),
+   -> dept VARCHAR(75),
+   -> is_admin YINYINT(1),
+   -> register_date DATETIME,
+   -> PRIMARY KEY(id)
+   ->);
+
