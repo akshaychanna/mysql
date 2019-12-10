@@ -63,7 +63,7 @@ SELECT * FROM users WHERE first_name LIKE 'a%';
 
 SELECT * FROM users WHERE location IN('pune', 'solapur');
 
-SELECT COUNT(id) users;
+SELECT COUNT(id) FROM users;
 it will give count (number of enterys)
 SELECT MAX(age) FROM users;
 it will give maximum age entry
